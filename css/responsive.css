@@ -25,6 +25,9 @@
 	.grey-bg, .white-bg{
 		padding: 40px 0; 
 	}
+    .work-spacer{
+        padding:70px 0 40px 0!important;
+    }
 	.secondary-hero{
 		padding-top: 50px;
 	}
@@ -45,34 +48,42 @@
 	/*---- portfolio -----*/
 	ul.portfolio-image li{
 		width: 100%;
-		padding-top: 95%;
+		padding-top: 67%;
 	}
+    
+    /*---- skills -----*/
+    .skills-icons-text{
+        text-align: center;
+    }    
 
 	/*---- blog -----*/
 	.grid-item {
-    width: 100% !important;
-    padding: 0;
+        width: 100% !important;
+        padding: 0;
   }
 
 	/*---- quote -----*/
 	.wrap-about{ 
 		padding: 0;
-		min-height: 460px !important;
 	}
 	.wrap-about .w-content{
-		left: 0;
-    right: 0;
-    width: 100%;
-    top: 0;
-    padding: 0;
-    transform: none;
+        left: 0;
+        right: 0;
+        width: 100%;
+        top: 0;
+        padding: 0;
+        transform: none;
 	}
 
 
   /*------- testimonial -------*/
   #testimonial{ height: 700px;}
+    
+    .list-testimonial .content-testimonial .testi {
+        line-height: 35px;
+    }
 
-  .skillst {margin-top: 50px;}
+      .skillst {margin-top: 50px;}
 }
 
 @media screen and (min-width: 560px) and (max-width: 736px){
@@ -99,12 +110,14 @@
 	/*------- home ------*/
 	#home p {width: 100%;}
 	
-	/*---- hero -----*/
-	.mouse-icon{display: none!important;}
 
-	/*----- portfolio -----*/
+	/*---- portfolio -----*/
+    ul.portfolio-image {
+        margin: 30px 0 0 0;
+    }
+    
 	.portfolio-image > li{
-		width: 50%;
+		width: 100%;
 	}
 
 
@@ -114,7 +127,7 @@
   /*------- about -------*/
   .bg-about{min-height: 680px;}
   .wrap-about{
-  	min-height: 520px;
+  	min-height: 500px;
   	padding-bottom: 10%;
   	padding-left: 30px;
     padding-right: 30px;
@@ -125,6 +138,12 @@
 
   .text-grey{margin-bottom: 45px;}
   .skillst{ margin-top: 50px;}
+    
+    /*---- skills -----*/
+    .skills-icons-section{
+        margin-top:40px!important;
+    }
+    
 	/*------ footer -----*/
   footer p{ text-align: center; }
   footer ul.social {
@@ -135,10 +154,50 @@
 		padding: 0px 10px 0px 10px;
 	}
 }
+@media (max-width: 991px) {
+    /*---- portfolio -----*/
+    ul.portfolio-image li{
+        padding-top: 67%;
+		width: 100%;
+    }
+    .pages1 {
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+    .pages2 {
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+        margin-top: 70px;
+    }
+    .pages3 {
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+        margin-top: 70px;
+    }
+    .pages4 {
+        padding-left:0px!important;
+        padding-right: 0px!important;
+        margin-top: 70px;
+    }
 
+}
+@media screen and (max-width: 1024px){
+    
+    .mouse-icon{display: none!important;}
+}
 @media screen and (min-width: 1024px){
 	.content-right {
-	  margin-top: 20px;
-	  padding: 0 20px 0 60px; 
+        margin-top: 20px;
+        padding: 0 20px 0 60px; 
 	}
+    .resume-link{
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1243px){
+    .wrap-about .w-content {
+        width: 70%;
+    }
 }

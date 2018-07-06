@@ -28,7 +28,7 @@
       $(this).addClass('active');
  
       var target = this.hash;
-      $target = $(target);
+      var $target = $(target);
       $('html, body').stop().animate({
         'scrollTop': $target.offset().top+2
       }, 500, 'swing', function () {
@@ -89,18 +89,16 @@
 
 
     //typed js
-    //$(".typed").typed({
-    //    strings: ["My Name is Jason WIlson", "I'm a Web Designer", "Love Simplicity"],
-    //    typeSpeed: 100,
-    //    backDelay: 900,
-        // loop
-    //    loop: true
-    //});
+    $(".typed").typed({
+        strings: ["I'll get back to you as soon as possible", "Use the navigation above to go back,", "or just sit tight and you'll be redirected back to my homepage"],
+        typeSpeed: 15,
+        backDelay: 200,
+        loop: true
+    });
 
     //owl carousel
     $('.owl-carousel').owlCarousel({
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
+      autoPlay: 7000, //Set AutoPlay to 7 seconds
       items : 1,
       itemsDesktop : [1199,1],
       itemsDesktopSmall : [979,1],
@@ -128,111 +126,27 @@
     });
 
     //contact
-    //$('input').blur(function() {
+    $('input').blur(function() {
 
       //check if the input has any value (if we've typed into it)
-     // if ($(this).val())
-     //   $(this).addClass('used');
-     // else
-     //   $(this).removeClass('used');
-    //});
-	  
-	  // ---------------- contact form ---------------- //
-// ---------------------------------------------- //
-$(document).on("click", ".contactFormSubmit", function(event){
-    event.preventDefault();
-
-    //declare variables
-    var contactName;
-    var contactEmail;
-    var contactPhone;
-    var contactMessage;
-    var contactSubject;
-
-    
-
-    //error handling
-    var contactError = new Array();
-    
-    //validate name
-    if($("#contactName").val().length > 0){
-        contactName = $("#contactName").val();
-    }else{
-        contactError.push("Please enter a name.");
-    }
-
-    //validate email
-    if($("#contactEmail").val().length > 0){
-        contactEmail = $("#contactEmail").val();
-    }else{
-        contactError.push("Please enter an email address.");
-    }
-
-    //validate phone
-    if($("#contactPhone").val().length > 0){
-        contactPhone = $("#contactPhone").val();
-
-    }else{
-        contactError.push("Please enter a phone number.");
-    }
-
-    // Set Message
-    contactMessage = $("textarea#contactMessage").val();
-
-    // Set Subject
-    contactSubject = $("#contactSubject").val();
-
-    // Captcha
-    var v = grecaptcha.getResponse();
-    if(v.length == 0)
-    {
-        contactError.push("You must complete the captcha.");
-     
-    }
-
-
-    
-    $(".errorOutput").empty();
-    
-    if(contactError.length > 0){
-
-        for (var i = 0; i < contactError.length; i++) {
-            
-            var htmlOutput = "<span><i class=\"fa fa-exclamation-circle\"></i> " + contactError[i] + "</span><br/>";
-			//var htmlOutput = "<h4 class="icon-use">J</h4> " + contactError[i] + "<br/>";
-
-            $(".errorOutput").append(htmlOutput);
-        }
-
-    }else{
-
-        $.ajax({
-            method: "POST",
-          url: "https://www.thejasonwilson.com/form-process.php",
-          data: { Name: contactName, Email: contactEmail, Company: contactPhone, Comments: contactMessage, Subject: contactSubject}
-        }).done(function(response) {
-          $(".contactForm").hide();
-          $(".contactThankYou").show();
-          $(".contactResponse").html(response);
-        }).fail(
-         function(){
-            alert("error");
-       });
-   } 
-});
+     if ($(this).val())
+     $(this).addClass('used');
+     else
+     $(this).removeClass('used');
+    });
 
     //pop up porfolio
     $('.portfolio-image li a').magnificPopup({
       type: 'image',
       gallery: {
-        enabled: true
+        enabled: false
 	  },
 		image: {
 			titleSrc: function(item) {
 				var projectTitle = item.el.attr('title');
 				var projectDivider = ' : ';
 				var projectURL = projectTitle.replace(/\s+/g, '').toLowerCase();
-				var projectLink =  '<a class="image-source-link" href="/work/'+projectURL+'.html">see more</a>';
+				var projectLink =  '<a class="image-source-link" href="/work/'+projectURL+'.php">see more</a>';
 				var projectLinkPDF = '<a class="image-source-link" href="'+projectURL+'.pdf">download PDF</a>';
 				
 				if (projectTitle == "Resume"){
@@ -279,13 +193,17 @@ $(document).on("click", ".contactFormSubmit", function(event){
 
   window.onload = inits();
 
-  //nav-active
+   //nav-active
   function onScroll(event){
     var scrollPosition = $(document).scrollTop();
     $('.menu-list a').each(function () {
       var currentLink = $(this);
-      var refElement = $(currentLink.attr("href"));
-      if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+      var linkHref = currentLink.attr("href"); // extract the href attribute from link
+      var anchor = linkHref.split("#").pop(); // split by # and take the last part
+      var refElement = $("#" + anchor); // use the anchor extract to use it as id selector
+
+      // add refElement.length check - to just continue if the element actually exist
+      if (refElement.length && refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
         $('.menu-list a').removeClass("active");
         currentLink.addClass("active");
       }

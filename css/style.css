@@ -66,7 +66,7 @@ body {
 	background-color: #fff;
 }
 a {
-	color: #07a6ec;
+	color: #1ab4fa;
 	/*color: #2f2f2f;*/
 	text-decoration: none;
 	transition: ease .6s;
@@ -123,8 +123,14 @@ img { max-width: 100%; }
 
 /*----------------------------------------- 3) Helper --------------------------------------------------*/
 .no-pad {padding: 0 !important; margin: 0 !important;}
+.no-mar {margin: 0!important;}
 .pad-80 {padding-top: 80px;}
+.mar-t-70{margin-top: 70px !important;}
+.mar-t-60{margin-top: 60px !important;}
 .mar-t-50{margin-top: 50px !important;}
+.mar-t-40{margin-top: 40px !important;}
+.mar-t-30{margin-top: 30px !important;}
+.mar-t-20{margin-top: 20px !important;}
 .mar-tm-10{ margin-top: -10px;}
 
 .white-col{
@@ -154,6 +160,26 @@ img { max-width: 100%; }
 	width: 28px;
 	left: 0;
 }
+
+.next-project-title{
+    color: #bababa!important;
+    font-family: 'Roboto', sans-serif;
+    text-transform:capitalize;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.next-project-title span{
+    color: #2f2f2f;
+    font-family: 'Baufra-Bold', sans-serif;
+    font-size: 25px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+.visit-site{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: lowercase;
+}
 /*----- background ------*/
 .grey-bg {
 	background: #f6f6f6;
@@ -164,6 +190,14 @@ img { max-width: 100%; }
 	background: #ffffff;
 	padding: 120px 0;
 	display: block;
+}
+.collage{
+    background: linear-gradient(141deg, #1ab4fa 20%, #33B7A4 51%, #5eed83 75%);
+	padding: 0;
+	display: block;    
+}
+.collage img{
+    width: 100%;
 }
 /*-------- content --------*/
 .content-detail {
@@ -479,20 +513,23 @@ p {
 #home h1 {
 	line-height: 40px;
 	letter-spacing: 0.6px;
+    color: #FFFFFF;
 }
 #home .typed {
+    color: #FFFFFF;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 26px;
 	letter-spacing: 1.5px;
 	margin: 0 auto;
-	opacity: 0.6;
+	/*opacity: 0.6;*/
 }
 .year {
 	font-size: 26px;
 	font-weight: 500;
 	margin-bottom: 10px;
 	font-family: 'Roboto', sans-serif;
+    color: #1ab4fa;
 }
 .job {
 	font-size: 14px;
@@ -500,13 +537,15 @@ p {
 	line-height: 18px;
 	letter-spacing: 0.4px;
 	text-transform: uppercase;
-	color: #cccccc;
+	color: #818181;
 }
 .company {
 	font-size: 12px;
 	line-height: 14px;
-	border: 1px solid #ececec;
-	color: #cccccc;
+	/*border: 1px solid #ececec;*/
+    background-color: #1ab4fa;
+	/*color: #cccccc;*/
+    color: #FFFFFF;
 	padding:8px 10px;
 	border-radius: 6px;
 	display: inline-block;
@@ -624,7 +663,7 @@ ul.portfolio-image li {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	padding-top: 63%;
+	padding-top: 65%;
 	/*padding-top: 46%;*/
 }
 ul.portfolio-image li:hover {
@@ -694,13 +733,41 @@ ul.portfolio-image li .desc{
 	font-weight: 700;
 }
 
+.resume-icon{
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    font-size: 100px!important;
+}
+.resume-text{
+    margin-top: 60px!important;
+}
+
+.pages1 {
+    padding-left:0px!important;
+    padding-right: 15px!important;
+}
+.pages2 {
+    padding-left:15px!important;
+    padding-right: 0px!important;
+}
+.pages3 {
+    padding-left:0px!important;
+    padding-right: 15px!important;
+    margin-top: 70px;
+}
+.pages4 {
+    padding-left:15px!important;
+    padding-right: 0px!important;
+    margin-top: 70px;
+}
+
 
 /*---------- b. service -----------*/
 .icon-use {
 	font-family: 'Glyphter';
 	font-size: 30px;
 	line-height: 20px;
-	color: #818181;
+	color: #1ab4fa;
 	margin: 0;
 }
 .head-sm {
@@ -787,13 +854,14 @@ ul.portfolio-image li .desc{
 }
 /*---------- d. testimonial -----------*/
 #testimonial {
-	background-image: url(../images/testimonial-bg.jpg);
-	-webkit-background-size: cover;
+	/*background-image: url(../images/testimonial-background.jpg);*/
+    background: linear-gradient(141deg, #1ab4fa 20%, #33B7A4 51%, #5eed83 75%);
+	/*-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-	position: relative;
+	position: relative;*/
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -816,7 +884,8 @@ ul.portfolio-image li .desc{
 	font-size: 14px;
 	margin-top: 30px;
 	letter-spacing: 2px;
-	color: #B7B7B7;
+    line-height:27px;
+	color: #2f2f2f;
 	font-weight: 700;
 }
 .mask-testimonial{
@@ -832,7 +901,7 @@ ul.portfolio-image li .desc{
 	position: relative;
 }
 /*-------------- e. blog -------------*/
-.grid {margin-top: 60px;}
+/*.grid {margin-top: 60px;}
 .grid:after {
 	content: '';
 	display: block;
@@ -917,7 +986,7 @@ ul.portfolio-image li .desc{
 	padding: 0 10px 0 10px;
 	text-align: justify;
 	color: #5f5f5f;
-}
+}*/
 /*---------- f. quote -----------*/
 #about{
 	min-height: 650px;
@@ -1004,7 +1073,7 @@ ul.portfolio-image li .desc{
 	display: block;
 	width: 100%;
 	border: none;
-	border-bottom: 1px solid #2b2b2b;
+	border-bottom: 1px solid #1ab4fa;
 	background: transparent;
 	color: #969696;
 	font-size: 13px;
@@ -1079,8 +1148,8 @@ ul.portfolio-image li .desc{
 	animation: inputHighlighter 0.3s ease;
 }
 #contact input[type=submit] {
-	border: 1px solid #2b2b2b !important;
-	color: #2b2b2b;
+	border: 1px solid #1ab4fa !important;
+	color: #1ab4fa;
 	padding: 10px;
 	font-weight: 700;
 	letter-spacing: 0.9px;
@@ -1090,7 +1159,7 @@ ul.portfolio-image li .desc{
 	-webkit-transition: 0.2s ease all;
 }
 #contact input[type=submit]:hover {
-	background: #2b2b2b;
+	background: #1ab4fa;
 	color: #ffffff;
 }
 @-webkit-keyframes inputHighlighter {
@@ -1119,6 +1188,10 @@ ul.portfolio-image li .desc{
 		width: 0;
 		background: transparent;
 	}
+}
+input.error,
+textarea.error{
+    border-bottom: 1px solid #FF0000 !important;
 }
 /*-------------- h. footer ------------------*/
 .footer-top{
@@ -1193,12 +1266,12 @@ ul.portfolio-image li .desc{
 	transform: translateY(100%);
 }
 
-.facebook{
+.linkedin{
 	background: #969696;
 	/*padding: 20px 0;*/
 }
-.facebook a:after{
-	background-color: #527bbb;
+.linkedin a:after{
+	background-color: #0073b1;
 }
 .twitter{
 	background: #ABABAB;
@@ -1206,11 +1279,11 @@ ul.portfolio-image li .desc{
 .twitter a:after{
 	background-color: #77ccf1;
 }
-.gplus{
+.github{
 	background: #d8d8d8;
 }
-.gplus a:after{
-	background: #dd4b39;
+.github a:after{
+	background: #000000;
 }
 
 .footer-bottom{
@@ -1223,6 +1296,7 @@ ul.portfolio-image li .desc{
 
 /*----------------------------------------- 8) Component --------------------------------------------------*/
 /*---------------- a. Skills ----------------*/
+
 .skillst {margin-top: 30px;}
 .skillst .skillbar {
 	width: 100%;
@@ -1234,12 +1308,12 @@ ul.portfolio-image li .desc{
 	box-sizing: border-box;
 }
 .skillst .count-bar {
-	width: 100%;
+
 	height: 5px;
 	width: 0px;
 	position: relative;
 }
-.skillst .count-bar {background-color: #0686bf;}
+.skillst .count-bar {background-color: #1ab4fa;}
 .skillst .count-bar span{ font-size: 12px;}
 .skillst .title {
 	position: absolute;
@@ -1259,6 +1333,7 @@ ul.portfolio-image li .desc{
 	color: #fff;
 	text-align: center;
 	background-color: #2f2f2f;
+    
 }
 .skillst .count-bar .count span {
 	position: relative;
@@ -1273,6 +1348,6 @@ ul.portfolio-image li .desc{
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
 }
-.skillst .count-bar .count { background-color: #0686bf;}
-.skillst .count-bar .count span:after { border-top: 4px solid #0686bf;}
+.skillst .count-bar .count { background-color: #1ab4fa;}
+.skillst .count-bar .count span:after { border-top: 4px solid #1ab4fa;}
 
