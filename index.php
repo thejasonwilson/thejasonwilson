@@ -647,6 +647,14 @@
 										<div class="count"></div>
 									</div>
 								</div>
+                                <div class="skillbar" data-percent="70%">
+									<div class="title head-sm">
+									Sketch
+									</div>
+									<div class="count-bar">
+										<div class="count"></div>
+									</div>
+								</div>
 								<div class="skillbar" data-percent="98%">
 									<div class="title head-sm">
 									Illustrator
